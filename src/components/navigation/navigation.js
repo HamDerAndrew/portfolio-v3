@@ -16,9 +16,9 @@ export default () => (
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-end">
-                <a href="#home" class="navbar-item">
+                <a href="#home" className="navbar-item">
                     Home
                 </a>
                 <a href="#projects" id="projects" className="navbar-item">

@@ -3,6 +3,10 @@ body {
     background-color: #070e1e;
 }
 
+h1, h2, h3, h4 {
+    margin-bottom: 1rem !important;
+}
+
 
 /* ==== Navigation Styling ==== */
 #main-nav {
@@ -12,8 +16,70 @@ body {
     box-shadow: 0px 11px 9px 0px rgba(0,0,0,0.75);
 }
 
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
 
 /* ==== Home Styling ==== */
 .arrow-container {
     padding-top: 4.5rem;
+}
+
+#seperator {
+    height: 1px;
+    background-color: #f0f2f6;
+}
+
+
+/* ==== Projects Styling ==== */
+#projects {
+    height: 100%;
+}
+
+.project-container {
+    padding: 6rem;
+}
+
+.image-container {
+    border-top: 1px solid #8892b0;
+    border-bottom: 1px solid #8892b0;
+}
+
+.custom-img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.text-container {
+    border-bottom: 1px solid #8892b0;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.project-text {
+    margin-bottom: 1rem;
+}
+
+.project-deployment {
+    padding: 0 !important;
+    margin-top: .5rem;
+}
+
+.deploy-location {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* svg:hover {
+    fill:red;
+    color:red;
+    cursor: pointer;
+    background-color: green;
+} */
+
+svg:hover, svg:hover .full-fill {
+    cursor: pointer;
+    fill:#183068;
+    transition: ease-out .06s;
 }
