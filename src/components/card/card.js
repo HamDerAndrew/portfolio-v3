@@ -1,8 +1,8 @@
 import React from "react";
 
-import Github from "../assets/svg/github-icon.svg";
-import Live from "../assets/svg/live-icon.svg";
-import PlaceholderImg from "../assets/img/placeholder-project.jpg";
+import Github from "../../assets/svg/github-icon.svg";
+import Live from "../../assets/svg/live-icon.svg";
+import PlaceholderImg from "../../assets/img/placeholder-project.jpg";
 
 export default (props) => (
 <div className="project-container">
@@ -14,10 +14,10 @@ export default (props) => (
     </div>
     <div className="column project-deployment">
         <div className="deploy-location">
-            <a href={props.gitUrl}>
+            <a href={props.gitUrl} target="_blank">
                 <Github />
             </a>
-            <a href={props.liveUrl}>
+            <a href={props.liveUrl} target="_blank">
                 <Live />
             </a>
         </div>

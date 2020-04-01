@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
 }
 
 .project-container {
-    padding: 6rem;
+    padding: 2rem;
 }
 
 .image-container {
@@ -70,13 +70,6 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: space-between;
 }
-
-/* svg:hover {
-    fill:red;
-    color:red;
-    cursor: pointer;
-    background-color: green;
-} */
 
 svg:hover, svg:hover .full-fill {
     cursor: pointer;
