@@ -10,7 +10,7 @@ export default (props) => (
         <img src={PlaceholderImg} alt="project" className="image custom-img" />
     </div>
     <div className="text-container">
-        <p className="project-text is-size-5">{props.description}</p>
+        <p className="project-text">{props.description}</p>
     </div>
     <div className="column project-deployment">
         <div className="deploy-location">

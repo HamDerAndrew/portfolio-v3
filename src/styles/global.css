@@ -4,7 +4,15 @@ body {
 }
 
 h1, h2, h3, h4 {
+    font-family: 'Archivo Narrow', sans-serif;
     margin-bottom: 1rem !important;
+    line-height: 1.2;
+}
+
+p, nav a {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 
@@ -17,7 +25,7 @@ h1, h2, h3, h4 {
 }
 
 .wrapper {
-    max-width: 80%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
@@ -76,3 +84,93 @@ svg:hover, svg:hover .full-fill {
     fill:#183068;
     transition: ease-out .06s;
 }
+
+
+/* ==== About Styling ==== */
+.about-container {
+    padding: 2rem;
+}
+
+.leyline-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leyline {
+    background-color: #243c56;
+    height: 7px;
+    padding: 0 !important;
+}
+
+.short {
+    width: 10%;
+}
+
+.long {
+    width: 80%;
+}
+
+.box-container {
+    width: 80%;
+    margin: auto;
+}
+
+.tech-box {
+    border: 1px solid #243c56;
+}
+
+.skill-text {
+    padding: .5rem;
+}
+
+.ptb {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.pt {
+    padding-top: 5rem;
+}
+
+.pb {
+    padding-bottom: 5rem;
+}
+
+
+
+/* ==== Contact Styling ==== */
+.some-icon {
+
+} 
+
+
+
+
+  /* ==== Mediaquries max-width 768px ==== */
+@media screen and (max-width: 768px) {
+    .box-container {
+        width: 100%;
+        margin: auto;
+    }
+  }
+
+
+/* ==== Mediaquries max-width 960px ==== */
+@media screen and (max-width: 960px) {
+    .wrapper {
+      max-width: 90%;
+    }
+  }
+
+
+    /* ==== Mediaquries max-width 1216px ==== */
+@media screen and (min-width: 1216px) {
+    .box-container {
+        width: 60%;
+        margin: auto;
+    }
+
+    .wrapper {
+        max-width: 50%;
+      }
+  }
