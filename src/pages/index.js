@@ -111,29 +111,23 @@ export default () => {
 
             <section id="contact" className="wrapper pb">
                 <div className="container has-text-centered">
-                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Want to work <br /> with me?</h2>
+                    <h2 className="is-uppercase has-text-weight-bold is-size-1 pb">Want to work <br /> with me?</h2>
                     <p className="is-size-4">Feel free to reach out or <br /> just have a look at my <br /> social media:</p>
                 </div>
-                <div className="columns has-text-centered">
-                    <div className="some-icon column">
-                        <a>
+                <div className="some-box has-text-centered">
+                        <a className="some-icon" href="www.linkedin.com">
                             <Linkedin />
                         </a>
-                    </div>
-                    <div className="some-icon column">
-                        <a>
+                        <a className="some-icon" href="www.twitter.com">
                             <Twitter />
                         </a>
-                    </div>
-                    <div className="some-icon column">
-                        <a>
+                        <a className="some-icon" href="www.github.com">
                             <Github />
                         </a>
-                    </div>
                 </div>
-                <div className="container has-text-centered">
-                    <h3 className="">Or contact me on my email:</h3>
-                    <p>andrewsondergaard@gmail.com</p>
+                <div className="container pt has-text-centered">
+                    <p className="is-size-4">Or contact me on my email:</p>
+                    <p className="is-size-4 has-text-weight-bold">andrewsondergaard@gmail.com</p>
                 </div>
             </section>
         </div> 

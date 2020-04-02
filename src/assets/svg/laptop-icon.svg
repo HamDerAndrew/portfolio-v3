@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="52" height="52" viewBox="0 0 172 172" style=" fill:#000000;">
+    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+        <path d="M0,172v-172h172v172z" fill="none"></path>
+        <g id="original-icon" fill="#8892b0">
+            <path d="M28.66667,28.66667c-7.83362,0 -14.33333,6.49972 -14.33333,14.33333v71.66667c0,7.83362 6.49972,14.33333 14.33333,14.33333h-28.66667v14.33333h172v-14.33333h-28.66667c7.83362,0 14.33333,-6.49972 14.33333,-14.33333v-71.66667c0,-7.83362 -6.49972,-14.33333 -14.33333,-14.33333zM28.66667,43h114.66667v71.66667h-114.66667z"></path>
+        </g>
+    </g>
+</svg>

@@ -10,11 +10,24 @@ h1, h2, h3, h4 {
 }
 
 p, nav a {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Consolas', sans-serif;
     font-weight: 400;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 }
 
+p {
+    line-height: 1.3;
+}
+
+.wrapper {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+#seperator {
+    height: 1px;
+    background-color: #f0f2f6;
+}
 
 /* ==== Navigation Styling ==== */
 #main-nav {
@@ -24,21 +37,10 @@ p, nav a {
     box-shadow: 0px 11px 9px 0px rgba(0,0,0,0.75);
 }
 
-.wrapper {
-    max-width: 60%;
-    margin: 0 auto;
-}
-
 /* ==== Home Styling ==== */
 .arrow-container {
     padding-top: 4.5rem;
 }
-
-#seperator {
-    height: 1px;
-    background-color: #f0f2f6;
-}
-
 
 /* ==== Projects Styling ==== */
 #projects {
@@ -50,8 +52,31 @@ p, nav a {
 }
 
 .image-container {
+    padding: 2rem 0;
     border-top: 1px solid #8892b0;
     border-bottom: 1px solid #8892b0;
+    /* background-image: url("../assets/svg/laptop-icon.svg"); */
+}
+
+.monitor {
+    /*width: 100%;*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 7rem;
+    border: 1px solid #8892b0;
+}
+
+.project-title {
+    width: 100%;
+}
+
+.monitor-stand {
+    height: 1rem;
+    width: 50%;
+    margin: auto;
+    border: 1px solid #8892b0
 }
 
 .custom-img {
@@ -139,11 +164,14 @@ svg:hover, svg:hover .full-fill {
 
 
 /* ==== Contact Styling ==== */
-.some-icon {
-
+.some-box {
+    display: flex;
+    justify-content: center;
 } 
 
-
+.some-icon {
+    padding: 1rem;
+}
 
 
   /* ==== Mediaquries max-width 768px ==== */
