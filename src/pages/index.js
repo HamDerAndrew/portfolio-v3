@@ -34,7 +34,7 @@ export default () => {
 
             <Seperator />
 
-            <section id="projects" className="wrapper pb">
+            <section id="projects" className="wrapper ptb">
                 <div className="container has-text-centered">
                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have build</h2>
                     <h3 className="subtitle has-text-weight-bold is-size-4">The projects range from  <br /> websites to native apps.</h3>
@@ -64,7 +64,7 @@ export default () => {
 
             <Seperator />
 
-            <section id="about" className="wrapper pb">
+            <section id="about" className="wrapper ptb">
                 <div className="container has-text-centered pb">
                     <h2 className="is-uppercase has-text-weight-bold is-size-1">About me</h2>
                 </div>
@@ -109,9 +109,9 @@ export default () => {
 
             <Seperator />
 
-            <section id="contact" className="wrapper pb">
+            <section id="contact" className="wrapper ptb">
                 <div className="container has-text-centered">
-                    <h2 className="is-uppercase has-text-weight-bold is-size-1 pb">Want to work <br /> with me?</h2>
+                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Want to work <br /> with me?</h2>
                     <p className="is-size-4">Feel free to reach out or <br /> just have a look at my <br /> social media:</p>
                 </div>
                 <div className="some-box has-text-centered">
