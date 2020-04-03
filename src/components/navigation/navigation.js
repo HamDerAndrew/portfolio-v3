@@ -5,7 +5,9 @@ class Navigation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggleMenu: false
+            toggleMenu: false,
+            prevScrollpos: window.pageYOffset,
+            isVisible: true
         }
     }
 
@@ -15,9 +17,30 @@ class Navigation extends Component {
         }));
     }
 
+    scrollShow = () => {
+        const { prevScrollpos } = this.state;
+
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollpos > currentScrollPos;
+      
+        this.setState({
+          prevScrollpos: currentScrollPos,
+          isVisible: visible
+        });
+    }
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.scrollShow);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.scrollShow);
+    }
+
     render() {
+
         return (
-        <nav id="main-nav" className="navbar">
+        <nav className={`navbar main-nav ${this.state.isVisible ? '': 'hide-nav'}`}>
             <div className="navbar-brand">
                 <a href="/">
                     <img src={logo} alt="logo"/>
@@ -32,8 +55,8 @@ class Navigation extends Component {
             </div>
 
             <div id="navbarBasicExample" className={`navbar-menu ${this.state.toggleMenu ? 'is-active' : ''}`}>
-                <div className="navbar-end">
-                    <a href="#home" className="navbar-item hvr-underline-from-left">
+                <div className="navbar-end nav-custom">
+                    <a href="#home" id="home" className="navbar-item hvr-underline-from-left">
                         Home
                     </a>
                     <a href="#projects" id="projects" className="navbar-item hvr-underline-from-left">
@@ -49,8 +72,6 @@ class Navigation extends Component {
             </div>
         
         </nav>
-
-        
         )
     }
 }

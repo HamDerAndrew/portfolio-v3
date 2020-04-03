@@ -13,7 +13,7 @@ import Project from "../components/card/card";
 
 export default () => {
     return(
-        <div>
+        <div className="">
         <Helmet>
             <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet" />
         </Helmet>
