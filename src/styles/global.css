@@ -1,4 +1,8 @@
 /* ==== General Styling ==== */
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     background-color: #070e1e;
 }
@@ -13,8 +17,9 @@ nav a {
     font-size: 1.2rem;
 }
 
-a.navbar-item:hover {
+a.navbar-item:hover, a.navbar-item:active, a.navbar-item:focus, a.navbar-item:focus-within {
     background: transparent !important;
+    color: inherit !important;
 }
 
 p, nav a {
@@ -32,7 +37,7 @@ p {
     margin: 0 auto;
 }
 
-#seperator {
+.seperator {
     height: 1px;
     background-color: #f0f2f6;
 }
@@ -57,10 +62,12 @@ p {
     align-items: center !important;
 }
 
+
 /* ==== Home Styling ==== */
 .arrow-container {
     padding-top: 4.5rem;
 }
+
 
 /* ==== Projects Styling ==== */
 .project-container {
@@ -202,9 +209,14 @@ svg:hover, svg:hover .full-fill {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:active:before {
     right: 0;
   }
+  /*
+    .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+  */
 
 
 

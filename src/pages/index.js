@@ -115,13 +115,13 @@ export default () => {
                     <p className="is-size-4">Feel free to reach out or <br /> just have a look at my <br /> social media:</p>
                 </div>
                 <div className="some-box has-text-centered">
-                        <a className="some-icon" href="www.linkedin.com">
+                        <a className="some-icon" href="https://www.linkedin.com/in/sondergaardandre/">
                             <Linkedin />
                         </a>
-                        <a className="some-icon" href="www.twitter.com">
+                        <a className="some-icon" href="https://.twitter.com/hamderandrew">
                             <Twitter />
                         </a>
-                        <a className="some-icon" href="www.github.com">
+                        <a className="some-icon" href="https://twitter.com/hamderandrew">
                             <Github />
                         </a>
                 </div>

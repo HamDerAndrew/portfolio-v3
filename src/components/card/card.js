@@ -16,10 +16,10 @@ export default (props) => (
     </div>
     <div className="column project-deployment">
         <div className="deploy-location">
-            <a href={props.gitUrl} target="_blank">
+            <a href={props.gitUrl} target="_blank" rel="noopener noreferrer">
                 <Github />
             </a>
-            <a href={props.liveUrl} target="_blank">
+            <a href={props.liveUrl} target="_blank" rel="noopener noreferrer">
                 <Live />
             </a>
         </div>

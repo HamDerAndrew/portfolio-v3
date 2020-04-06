@@ -6,7 +6,7 @@ class Navigation extends Component {
         super(props);
         this.state = {
             toggleMenu: false,
-            prevScrollpos: window.pageYOffset,
+            prevScrollPos: window.pageYOffset,
             isVisible: true
         }
     }
@@ -18,13 +18,13 @@ class Navigation extends Component {
     }
 
     scrollShow = () => {
-        const { prevScrollpos } = this.state;
+        const { prevScrollPos } = this.state;
 
         const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos > currentScrollPos;
+        const visible = prevScrollPos > currentScrollPos;
       
         this.setState({
-          prevScrollpos: currentScrollPos,
+          prevScrollPos: currentScrollPos,
           isVisible: visible
         });
     }
@@ -56,16 +56,16 @@ class Navigation extends Component {
 
             <div id="navbarBasicExample" className={`navbar-menu ${this.state.toggleMenu ? 'is-active' : ''}`}>
                 <div className="navbar-end nav-custom">
-                    <a href="#home" id="home" className="navbar-item hvr-underline-from-left">
+                    <a href="#home" className="navbar-item hvr-underline-from-left">
                         Home
                     </a>
-                    <a href="#projects" id="projects" className="navbar-item hvr-underline-from-left">
+                    <a href="#projects" className="navbar-item hvr-underline-from-left">
                         Projects
                     </a>
-                    <a href="#about" id="about" className="navbar-item hvr-underline-from-left">
+                    <a href="#about" className="navbar-item hvr-underline-from-left">
                         About
                     </a>
-                    <a href="#contact" id="contact" className="navbar-item hvr-underline-from-left">
+                    <a href="#contact" className="navbar-item hvr-underline-from-left">
                         Contact
                     </a>
                 </div>
