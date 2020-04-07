@@ -1,5 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet";
+import { graphql } from "gatsby";
 import "./bulma-styles.scss";
 
 import Arrow from "../assets/svg/arrow.svg";
@@ -11,9 +12,10 @@ import Navigation from "../components/navigation/navigation";
 import Seperator from "../components/seperator/seperator";
 import Project from "../components/card/card";
 
-export default () => {
+export default ({ data }) => {
+    console.log(data)
     return(
-        <div className="">
+        <div>
         <Helmet>
             <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet" />
         </Helmet>
@@ -41,24 +43,19 @@ export default () => {
                 </div>
                 {/* Projects Start */}
                 <div className="columns is-centered">
-                    <div className="column">
-                        <Project 
-                            description="A project involving the use of different technologies for the front-end and back-end. More about the project comes later." 
-                            gitUrl="www.github.com/HamDerAndrew" 
-                        />
-                    </div>
-                    <div className="column">
-                        <Project 
-                            description="A project involving the use of different technologies for the front-end and back-end. More about the project comes later." 
-                            gitUrl="www.github.com/HamDerAndrew" 
-                        />
-                    </div>
-                    <div className="column">
-                        <Project 
-                            description="A project involving the use of different technologies for the front-end and back-end. More about the project comes later." 
-                            gitUrl="www.github.com/HamDerAndrew" 
-                        />
-                    </div>
+                    
+                        {data.allMarkdownRemark.edges.map(({ node }) => (
+
+                        <div className="column">
+                            <Project 
+                                keyId={node.id}
+                                cardTitle={node.frontmatter.title}
+                                description={node.excerpt}
+                                gitUrl={node.frontmatter.giturl}
+                                liveUrl={node.frontmatter.liveurl}
+                            />
+                        </div>
+                        ))}
                 </div>
             </section>
 
@@ -74,7 +71,7 @@ export default () => {
                 </div>
                 <div className="columns about-container">
                     <div className="column">
-                        <p className="is-size-4">Aside from being interested in technology in general, I hold a bachelor degree in Webdevelopment from UCL Odense in Denmark and have worked with develppment of websites and native apps for 2 years. I have worked on projects where I was the only developer and also on projects as part of a team.
+                        <p className="is-size-4">Aside from being interested in technology in general, I hold a bachelor degree in Webdevelopment from UCL Odense in Denmark. I have worked with development of websites and native apps for 2 years. I have worked on projects where I was the only developer and also on projects as part of a team.
                         Some of the technologies I have worked with include:
                         </p>
                     </div>
@@ -88,6 +85,9 @@ export default () => {
                             </div>
                             <div className="tech-box has-text-centered">
                                 <p className="is-size-4 skill-text">Vue</p>
+                            </div>
+                            <div className="tech-box has-text-centered">
+                                <p className="is-size-4 skill-text">Gatsby</p>
                             </div>
                             <div className="tech-box has-text-centered">
                                 <p className="is-size-4 skill-text">React Native</p>
@@ -133,3 +133,22 @@ export default () => {
         </div> 
     )
 }
+
+export const query = graphql`
+query {
+    allMarkdownRemark {
+        edges {
+          node {
+            excerpt
+            frontmatter {
+              title
+              description
+              giturl
+              liveurl
+            }
+            id
+          }
+        }
+      }
+}
+`
