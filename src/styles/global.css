@@ -70,6 +70,15 @@ p {
 
 
 /* ==== Projects Styling ==== */
+.card-container {
+    max-width: 100%;
+}
+
+.project-card {
+    width: 33%;
+    display: inline-block;
+}
+
 .project-container {
     padding: 2rem;
 }
@@ -81,7 +90,6 @@ p {
 }
 
 .monitor {
-    /*width: 100%;*/
     display: flex;
     align-items: center;
     text-align: center;
@@ -110,6 +118,7 @@ p {
     border-bottom: 1px solid #8892b0;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    min-height: 9rem;
 }
 
 .project-text {
@@ -236,6 +245,12 @@ svg:hover, svg:hover .full-fill {
     .box-container {
         width: 100%;
         margin: auto;
+    }
+    
+    .project-card {
+        width: 50%;
+        margin: auto;
+        display: block;
     }
   }
 

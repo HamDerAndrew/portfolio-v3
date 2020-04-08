@@ -42,11 +42,11 @@ export default ({ data }) => {
                     <h3 className="subtitle has-text-weight-bold is-size-4">The projects range from  <br /> websites to native apps.</h3>
                 </div>
                 {/* Projects Start */}
-                <div className="columns is-centered">
+                <div className="card-container">
                     
                         {data.allMarkdownRemark.edges.map(({ node }) => (
 
-                        <div className="column">
+                        <div className="project-card">
                             <Project 
                                 keyId={node.id}
                                 cardTitle={node.frontmatter.title}

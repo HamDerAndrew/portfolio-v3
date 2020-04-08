@@ -5,4 +5,4 @@ giturl: https://github.com/HamDerAndrew/Restaurant-site-template
 liveurl: https://delrestaurant.netlify.com/
 ---
 
-Yet another one joins the project list.
+En simpel "quote creator", hvor du kan indtaste en quote, som postes på siden. Ingen back-end, så de kan ikke gemmes

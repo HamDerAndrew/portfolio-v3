@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: master
+
+collections:
+  - name: "project"
+    label: "Project"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Project title", name: "title", widget: "string", required: true, default: "Project"}
+      - {label: "Github URL", name: "giturl", widget: "string", required: true}
+      - {label: "Live URL", name: "liveurl", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
