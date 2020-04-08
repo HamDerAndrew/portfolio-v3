@@ -6,7 +6,7 @@ class Navigation extends Component {
         super(props);
         this.state = {
             toggleMenu: false,
-            prevScrollPos: window.pageYOffset,
+            prevScrollPos: 0,
             isVisible: true
         }
     }
@@ -31,6 +31,9 @@ class Navigation extends Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.scrollShow);
+        this.setState({
+            prevScrollPos: window.pageYOffset,
+          });
     }
 
     componentWillUnmount() {
