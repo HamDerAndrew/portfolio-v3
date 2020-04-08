@@ -6,7 +6,7 @@ import "./bulma-styles.scss";
 import Github from "../assets/svg/github-icon.svg";
 import Linkedin from "../assets/svg/linkedin-icon.svg";
 import Twitter from "../assets/svg/twitter-icon.svg";
-import Arrow from "../assets/svg/arrow.svg";
+import ScrollArrow from "../assets/svg/arrow.svg";
 
 import Navigation from "../components/navigation/navigation";
 import Seperator from "../components/seperator/seperator";
@@ -27,7 +27,7 @@ export default ({ data }) => {
                         <h3 className="subtitle has-text-weight-bold is-size-4">Webdeveloper out of Denmark. <br /> I build things for <br /> the web, Android and iOS.</h3>
                         <div className="arrow-container">
                             <a href="#projects">
-                                <Arrow />
+                                <ScrollArrow />
                             </a>
                         </div>
                     </div>
