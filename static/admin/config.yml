@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+media_folder: "static/uploads"
+
 collections:
   - name: "project"
     label: "Project"
