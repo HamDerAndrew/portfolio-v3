@@ -6,7 +6,7 @@ import "./bulma-styles.scss";
 import Github from "../assets/svg/github-icon.svg";
 import Linkedin from "../assets/svg/linkedin-icon.svg";
 import Twitter from "../assets/svg/twitter-icon.svg";
-import ScrollArrow from "../assets/svg/arrow.svg";
+import ScrollArrow from "../assets/svg/arrow-icon.svg"
 
 import Navigation from "../components/navigation/navigation";
 import Seperator from "../components/seperator/seperator";
