@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import "./bulma-styles.scss";
 
-import Arrow from "../assets/svg/arrow.svg";
+
 import Github from "../assets/svg/github-icon.svg";
 import Linkedin from "../assets/svg/linkedin-icon.svg";
 import Twitter from "../assets/svg/twitter-icon.svg";
@@ -26,9 +26,9 @@ export default ({ data }) => {
                         <h2 className="is-uppercase has-text-weight-bold is-size-1">Hi! I'm André. <br /> I code</h2>
                         <h3 className="subtitle has-text-weight-bold is-size-4">Webdeveloper out of Denmark. <br /> I build things for <br /> the web, Android and iOS.</h3>
                         <div className="arrow-container">
-                            <a href="#projects">
+                            { /* <a href="#projects">
                                 <Arrow />
-                            </a>
+    </a> */}
                         </div>
                     </div>
                 </div>
