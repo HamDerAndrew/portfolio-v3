@@ -4,4 +4,4 @@ date: 2020-04-09T13:12:55.848Z
 giturl: 'https://github.com/HamDerAndrew/Quote-Creator-Vuejs'
 liveurl: 'https://alarsen.one/quotes/'
 ---
-En simpel "quote creator", hvor du kan indtaste en quote, som postes på siden. Ingen back-end, så de kan ikke gemmes
+A simple quote creator, where you can write a quote, which will posted on the page. There's no back-end to save the quotes.
