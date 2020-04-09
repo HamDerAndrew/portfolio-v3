@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'André Larsen - Developer portfolio',
-    description: "André Larsen's portfolio containing projects made by him",
+    description: "André Larsen's portfolio. Browse through my projects and feel free to contact me if you want to work with me",
     url: "https://andrelarsen.netlify.com/",
     twitterUsername: "@hamderandrew"
   },

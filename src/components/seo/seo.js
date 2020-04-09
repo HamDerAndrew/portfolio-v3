@@ -3,25 +3,31 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = ({ title, description, twitterUrl }) => {
+const SEO = ({ title, description, twitterUser }) => {
     const { site } = useStaticQuery(query);
 
     const {
         defaultTitle,
         defaultDescription,
-        defaultTwitterUrl,
+        defaultTwitterUser,
     } = site.siteMetadata;
 
     const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        twitterUrl: twitterUrl || defaultTwitterUrl,
+        twitterUser: twitterUser || defaultTwitterUser,
     }
 
     return (
         <Helmet title={seo.title}>
             <meta name="description" description={seo.description} />
             <meta name="twitter" content={seo.twitterUrl} />
+            <meta name="robots" content="index, follow" />
+
+            <meta name="twitter:title" content={seo.title} />
+            <meta name="twitter:description" content={seo.description} />
+            <meta name="twitter:site" content={seo.twitterUser} />
+            <meta name="twitter:creator" content={seo.twitterUser} />
         </Helmet>
     )
 }
