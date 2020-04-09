@@ -9,16 +9,21 @@ import Twitter from "../assets/svg/twitter-icon.svg";
 import ScrollArrow from "../assets/svg/arrow-icon.svg"
 
 import Navigation from "../components/navigation/navigation";
+import SEO from "../components/seo/seo";
 import Seperator from "../components/seperator/seperator";
 import Project from "../components/card/card";
 
 export default ({ data }) => {
-    console.log(data)
     return(
         <div>
-        <Helmet>
-            <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        </Helmet>
+            <SEO 
+                title={data.site.siteMetadata.title}
+                description={data.site.siteMetadata.description}
+                twitterUrl={data.site.siteMetadata.twitterUrl}
+            />
+            <Helmet>
+                <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet" />
+            </Helmet>
             <Navigation />
             <section id="home" className="hero is-fullheight-with-navbar">
                 <div className="hero-body">
@@ -45,7 +50,6 @@ export default ({ data }) => {
                 <div className="card-container">
                     
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-
                         <div className="project-card">
                             <Project 
                                 keyId={node.id}
@@ -56,6 +60,7 @@ export default ({ data }) => {
                             />
                         </div>
                         ))}
+
                 </div>
             </section>
 
@@ -149,6 +154,13 @@ query {
             id
           }
         }
-      }
+    }
+    site {
+        siteMetadata {
+          title
+          description
+          twitterUsername
+        }
+    }
 }
 `

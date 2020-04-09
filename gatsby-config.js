@@ -6,7 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'André Larsen - Developer portfolio'
+    title: 'André Larsen - Developer portfolio',
+    description: "André Larsen's portfolio containing projects made by him",
+    url: "https://andrelarsen.netlify.com/",
+    twitterUsername: "@hamderandrew"
   },
   plugins: [
     `gatsby-plugin-sass`,
