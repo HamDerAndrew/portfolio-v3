@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{title}}”'
-    update: 'Update {{collection}} “{{title}}”'
-    delete: 'Delete {{collection}} “{{title}}”'
+    create: 'Create {{collections}} “{{slug}}”'
+    update: 'Update {{collections}} “{{slug}}”'
+    delete: 'Delete {{collections}} “{{slug}}”'
 
 media_folder: "static/uploads"
 
