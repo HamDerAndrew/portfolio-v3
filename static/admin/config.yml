@@ -13,7 +13,7 @@ collections:
     label: "Project"
     folder: "src/pages/projects"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug}}-{{name}}"
     fields:
       - {label: "Project title", name: "title", widget: "string", required: true, default: "Project"}
       - {label: "Github URL", name: "giturl", widget: "string", required: true}
