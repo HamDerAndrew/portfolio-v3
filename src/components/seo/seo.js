@@ -20,7 +20,9 @@ const SEO = ({ title, description, twitterUser }) => {
 
     return (
         <Helmet title={seo.title}>
+            <html lang="en" />
             <meta name="description" description={seo.description} />
+            <meta name="Description" content={seo.description} />
             <meta name="twitter" content={seo.twitterUrl} />
             <meta name="robots" content="index, follow" />
 
