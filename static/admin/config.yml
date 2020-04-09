@@ -13,9 +13,10 @@ collections:
     label: "Project"
     folder: "src/pages/projects"
     create: true
-    slug: "{{slug}}-{{name}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Project title", name: "title", widget: "string", required: true, default: "Project"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Github URL", name: "giturl", widget: "string", required: true}
       - {label: "Live URL", name: "liveurl", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", required: true}
