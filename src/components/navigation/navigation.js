@@ -17,6 +17,14 @@ class Navigation extends Component {
         }));
     }
 
+    handleEnterKey = (e) => {
+        if(e.keyCode === 13) {
+            this.setState(prevState => ({
+                toggleMenu: !this.state.toggleMenu
+            }));
+        }
+    }
+
     scrollShow = () => {
         const { prevScrollPos } = this.state;
 
@@ -36,7 +44,7 @@ class Navigation extends Component {
           });
     }
 
-    componentWillUnmount() {
+    UNSAFE_componentWillUnmount() {
         window.removeEventListener("scroll", this.scrollShow);
     }
 
@@ -50,7 +58,7 @@ class Navigation extends Component {
                 </a>
 
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                <a role="button" className={`navbar-burger burger ${this.state.isNavToggled ? 'is-active' : ''}`} onClick={this.handleToggle} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" tabIndex="0" className={`navbar-burger burger ${this.state.isNavToggled ? 'is-active' : ''}`} onClick={this.handleToggle} onKeyDown={this.handleEnterKey} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>

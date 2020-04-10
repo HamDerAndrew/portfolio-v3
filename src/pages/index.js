@@ -50,7 +50,7 @@ export default ({ data }) => {
                 <div className="card-container">
                     
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                        <div className="project-card">
+                        <div className="project-card" key={node.id}>
                             <Project 
                                 keyId={node.id}
                                 cardTitle={node.frontmatter.title}
