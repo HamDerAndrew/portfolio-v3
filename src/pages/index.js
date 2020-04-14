@@ -2,19 +2,22 @@ import React from "react"
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import "./bulma-styles.scss";
+import { Spring } from "react-spring/renderprops"
 
 import Github from "../assets/svg/github-icon.svg";
 import Linkedin from "../assets/svg/linkedin-icon.svg";
 import Twitter from "../assets/svg/twitter-icon.svg";
-import ScrollArrow from "../assets/svg/arrow-icon.svg"
 
+import Loading from "../components/loading/loading";
 import Navigation from "../components/navigation/navigation";
 import SEO from "../components/seo/seo";
+import ScrollArrow from "../components/scrollIcon/scrollIcon";
 import Seperator from "../components/seperator/seperator";
 import Project from "../components/card/card";
 
 export default ({ data }) => {
-    return(
+
+    return (
         <div>
             <SEO 
                 title={data.site.siteMetadata.title}
@@ -28,12 +31,19 @@ export default ({ data }) => {
             <section id="home" className="hero is-fullheight-with-navbar">
                 <div className="hero-body">
                     <div className="container has-text-centered	">
-                        <h2 className="is-uppercase has-text-weight-bold is-size-1">Hi! I'm André. <br /> I code</h2>
-                        <h3 className="subtitle has-text-weight-bold is-size-4">Webdeveloper out of Denmark. <br /> I build things for <br /> the web, Android and iOS.</h3>
+                        <Spring
+                            from={{ opacity: 0 }}
+                            to={{  opacity: 1 }}
+                            config={{duration: 1000}}
+                            >
+                            {props => 
+                                <div style={props}>
+                                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Hi! I'm André. <br /> I code</h2>
+                                    <h3 className="subtitle has-text-weight-bold is-size-4">Webdeveloper out of Denmark. <br /> I build things for <br /> the Web, Android and iOS.</h3>
+                                </div>}
+                        </Spring>
                         <div className="arrow-container">
-                            <a href="#projects">
-                                <ScrollArrow />
-                            </a>
+                            <ScrollArrow />
                         </div>
                     </div>
                 </div>
@@ -43,7 +53,7 @@ export default ({ data }) => {
 
             <section id="projects" className="wrapper ptb">
                 <div className="container has-text-centered">
-                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have build</h2>
+                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have built</h2>
                     <h3 className="subtitle has-text-weight-bold is-size-4">The projects range from  <br /> websites to native apps.</h3>
                 </div>
                 {/* Projects Start */}
@@ -120,15 +130,15 @@ export default ({ data }) => {
                     <p className="is-size-4">Feel free to reach out or <br /> just have a look at my <br /> social media:</p>
                 </div>
                 <div className="some-box has-text-centered">
-                        <a className="some-icon" href="https://www.linkedin.com/in/sondergaardandre/">
-                            <Linkedin />
-                        </a>
-                        <a className="some-icon" href="https://.twitter.com/hamderandrew">
-                            <Twitter />
-                        </a>
-                        <a className="some-icon" href="https://twitter.com/hamderandrew">
-                            <Github />
-                        </a>
+                    <a className="some-icon" href="https://www.linkedin.com/in/sondergaardandre/">
+                        <Linkedin />
+                    </a>
+                    <a className="some-icon" href="https://.twitter.com/hamderandrew">
+                        <Twitter />
+                    </a>
+                    <a className="some-icon" href="https://twitter.com/hamderandrew">
+                        <Github />
+                    </a>
                 </div>
                 <div className="container pt has-text-centered">
                     <p className="is-size-4">Or contact me on my email:</p>
