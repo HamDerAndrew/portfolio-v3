@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import "./bulma-styles.scss";
@@ -15,10 +15,31 @@ import ScrollArrow from "../components/scrollIcon/scrollIcon";
 import Seperator from "../components/seperator/seperator";
 import Project from "../components/card/card";
 
-export default ({ data }) => {
+export default class Index extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isLoading: true,
+            loadDuration: 3000
+        }
+    }
 
-    return (
-        <div>
+    componentDidMount() {
+        setTimeout( () => {
+            this.setState({isLoading: false})
+        }, this.state.loadDuration)
+       
+    }
+
+    render() {
+        const { data } = this.props;
+        
+        if(this.state.isLoading) {
+            return <Loading />
+        }
+
+        return(
+            <div>
             <SEO 
                 title={data.site.siteMetadata.title}
                 description={data.site.siteMetadata.description}
@@ -146,8 +167,10 @@ export default ({ data }) => {
                 </div>
             </section>
         </div> 
-    )
+        )
+    }
 }
+
 
 export const query = graphql`
 query {

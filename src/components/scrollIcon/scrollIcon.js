@@ -6,8 +6,8 @@ export default function scrollIcon() {
     return (
         <div>
             <Spring
-                from={{ transform: `translate(0px, 100px)` }}
-                to={{ transform: `translate(0px, 0px)` }}
+                from={{ transform: `translate(0px, 100px)`, opacity: 0 }}
+                to={{ transform: `translate(0px, 0px)`, opacity: 1 }}
                 >
                 {props => <div style={props}>  
                     <a href="#projects">
