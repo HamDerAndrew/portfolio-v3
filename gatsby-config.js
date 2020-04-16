@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -30,6 +31,18 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@favicon": "src/assets/favicon"
+        },
+        extensions: [
+          //png's not working atm
+        ]
+      }
+    },
   ]
 }
