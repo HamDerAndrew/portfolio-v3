@@ -26,9 +26,7 @@ class Loading extends Component {
 
         return (
             <div className="loading has-text-centered">
-                <h1 className="title has-text-light">Loading
-                    
-                </h1>
+                <h1 className="title has-text-light">Loading</h1>
                 <p className="loading-dots">
                 <Trail
                     items={elements}

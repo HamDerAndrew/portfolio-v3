@@ -16,9 +16,18 @@ nav a {
     font-size: 1.2rem;
 }
 
-a.navbar-item:hover, a.navbar-item:active, a.navbar-item:focus, a.navbar-item:focus-within {
+a.navbar-item:hover, a.navbar-item:focus, a.navbar-item:focus-within {
     background: transparent !important;
+    outline: none;
     color: inherit !important;
+}
+
+.navbar-burger:focus {
+    outline: none;
+}
+
+.navbar-burger {
+    color: #f0f0f3 !important;
 }
 
 p, nav a {
@@ -55,6 +64,14 @@ p {
 
 .navbar-brand {
     padding-left: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    max-width: 75%;
+    padding: .5rem 0;
 }
 
 .navbar-menu {
