@@ -20,7 +20,7 @@ export default class Index extends Component {
         super(props)
         this.state = {
             isLoading: true,
-            loadDuration: 3000
+            loadDuration: 2500
         }
     }
 

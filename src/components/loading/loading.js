@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Trail } from "react-spring/renderprops";
+import { Trail, config } from "react-spring/renderprops";
 
 
 class Loading extends Component {
@@ -7,26 +7,20 @@ class Loading extends Component {
         super(props)
         this.state = {
             isLoaded: false,
+            interval: setInterval(this.startInterval, 1200)
         }
     }
-/*     interval = null
 
     startInterval = () => {
-        this.interval = setInterval(() => {
-            this.setState({
-                isLoaded: true
-            })
-            console.log("logging")
-        }, 1000);
+        this.setState({
+            isLoaded: true,
+        })
+        console.log("logging")
     }
 
-    componentDidMount() {
-        this.startInterval()
+    componentWillUnmount() {
+        clearInterval(this.state.interval);
     }
-
-    componentWillMount() {
-        clearInterval();
-    } */
 
     render() {
         const elements = [" .", " .", " ."]
@@ -39,8 +33,9 @@ class Loading extends Component {
                     keys={element => element.key}
                     from={{ opacity: 0 }}
                     to={{ opacity: 1 }}
-                    reset={this.isLoaded}>
-                        {element => props => <span style={props} className="title has-text-light">{element}</span>}
+                    config={config.slow}
+                    reset={this.state.isLoaded}>
+                        {element => props => <span key={element.key} style={props} className="title has-text-light">{element}</span>}
                     </Trail>
                 </h1>
             </div>
