@@ -20,7 +20,7 @@ export default class Index extends Component {
         super(props)
         this.state = {
             isLoading: true,
-            loadDuration: 2500
+            loadDuration: 25000
         }
     }
 
@@ -35,7 +35,17 @@ export default class Index extends Component {
         const { data } = this.props;
         
         if(this.state.isLoading) {
-            return <Loading />
+
+            return (
+            <div>
+                <SEO 
+                    title={data.site.siteMetadata.title}
+                    description={data.site.siteMetadata.description}
+                    twitterUser={data.site.siteMetadata.twitterUser}
+                />
+                <Loading />
+            </div>
+            )
         }
 
         return(

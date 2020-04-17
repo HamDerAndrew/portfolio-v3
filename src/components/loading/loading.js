@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Trail, config } from "react-spring/renderprops";
 
-import SEO from "../seo/seo";
-
 
 class Loading extends Component {
     constructor(props) {
@@ -28,7 +26,6 @@ class Loading extends Component {
 
         return (
             <div className="loading has-text-centered">
-                <SEO />
                 <h1 className="title has-text-light">Loading</h1>
                 <p className="loading-dots">
                 <Trail

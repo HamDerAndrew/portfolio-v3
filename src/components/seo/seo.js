@@ -40,8 +40,9 @@ const SEO = ({ title, description, twitterUser }) => {
     }
 
     return (
-        <Helmet title={seo.title}>
+        <Helmet>
             <html lang="en" />
+            <title>{seo.title}</title>
             <meta name="description" description={seo.description} />
             <meta name="Description" content={seo.description} />
             <meta name="twitter" content={seo.twitterUrl} />
@@ -89,7 +90,7 @@ SEO.defaultProps = {
 }
 
 const query = graphql`
-    query SEO {
+    query {
         site {
             siteMetadata {
                 title
