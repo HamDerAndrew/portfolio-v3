@@ -15,7 +15,6 @@ class Loading extends Component {
         this.setState({
             isLoaded: true,
         })
-        console.log("logging")
     }
 
     componentWillUnmount() {
@@ -23,21 +22,25 @@ class Loading extends Component {
     }
 
     render() {
-        const elements = [" .", " .", " ."]
+        const elements = [".", ".", "."]
 
         return (
             <div className="loading has-text-centered">
                 <h1 className="title has-text-light">Loading
-                    <Trail
+                    
+                </h1>
+                <p className="loading-dots">
+                <Trail
                     items={elements}
-                    keys={element => element.key}
+                    keys={elements.map((element, index) => index)}
                     from={{ opacity: 0 }}
                     to={{ opacity: 1 }}
                     config={config.slow}
                     reset={this.state.isLoaded}>
-                        {element => props => <span key={element.key} style={props} className="title has-text-light">{element}</span>}
+                        {element => props => <span style={props} className="title has-text-light">{element}</span>}
+                        
                     </Trail>
-                </h1>
+                </p>
             </div>
         )
     }

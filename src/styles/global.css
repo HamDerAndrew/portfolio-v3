@@ -1,11 +1,10 @@
 /* ==== General Styling ==== */
 html {
     scroll-behavior: smooth;
+    /*due to fixed navbar top*/
+    padding-top: 3.25rem !important;
+    background-color: #070e1e !important;
   }
-  
-body {
-    background-color: #070e1e;
-}
 
 h1, h2, h3, h4 {
     font-family: 'Archivo Narrow', sans-serif;
@@ -77,6 +76,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.loading-dots {
+    padding-bottom: .5rem !important;
 }
 
 

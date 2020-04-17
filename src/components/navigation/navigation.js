@@ -52,7 +52,7 @@ class Navigation extends Component {
     render() {
 
         return (
-            <div>
+            
                 <Spring
                 from={{ opacity: 0 }}
                 to={{ opacity: 1 }}>
@@ -61,7 +61,9 @@ class Navigation extends Component {
                             <nav className={`navbar main-nav ${this.state.isVisible ? '': 'hide-nav'}`}>
                                 <div className="navbar-brand">
                                     <a href="/">
-                                        <img src={logo} alt="logo"/>
+                                        <div className="logo-container">
+                                            <img src={logo} alt="logo"/>
+                                        </div>
                                     </a>
 
                                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
@@ -91,7 +93,7 @@ class Navigation extends Component {
                             </nav>
                         </div>}
                 </Spring>
-            </div>
+            
         
         )
     }
