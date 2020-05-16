@@ -24,19 +24,23 @@ import favicon16x16 from "@favicon/favicon-16x16.png";
 import favicon32x32 from "@favicon/favicon-32x32.png";
 import favicon96x96 from "@favicon/favicon-96x96.png";
 
-const SEO = ({ title, description, twitterUser }) => {
+const SEO = ({ title, description, twitterUser, url, ogImg }) => {
     const { site } = useStaticQuery(query);
 
     const {
         defaultTitle,
         defaultDescription,
         defaultTwitterUser,
+        defaultUrl,
+        defaultOgImg,
     } = site.siteMetadata;
 
     const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
         twitterUser: twitterUser || defaultTwitterUser,
+        ogImage: ogImg || defaultOgImg,
+        homepageUrl: url || defaultUrl
     }
 
     return (
@@ -52,6 +56,12 @@ const SEO = ({ title, description, twitterUser }) => {
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:site" content={seo.twitterUser} />
             <meta name="twitter:creator" content={seo.twitterUser} />
+
+            <meta property="og:url"                content={seo.homepageUrl} />
+            <meta property="og:type"               content="website" />
+            <meta property="og:title"              content={seo.title} />
+            <meta property="og:description"        content={seo.description} />
+            <meta property="og:image"              content={seo.ogImage} />
 
             <link rel="apple-touch-icon" sizes="57x57" href={appleIcon57x57} />
             <link rel="apple-touch-icon" sizes="60x60" href={appleIcon60x60} />
@@ -81,12 +91,16 @@ SEO.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     twitterUrl: PropTypes.string,
+    url: PropTypes.string,
+    ogImg: PropTypes.string
 }
 
 SEO.defaultProps = {
     title: null,
     description: null,
     twitterUrl: null,
+    url: null,
+    ogImg: null
 }
 
 const query = graphql`
@@ -95,7 +109,9 @@ const query = graphql`
             siteMetadata {
                 title
                 description
-                twitterUsername
+                twitterUsername,
+                url,
+                ogImg
             }
         }
     }

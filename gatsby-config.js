@@ -7,10 +7,11 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'André Larsen - Developer portfolio',
+    title: 'André Larsen - Developer Portfolio',
     description: "André Larsen's portfolio. Browse through my projects and feel free to contact me if you want to work with me",
     url: "https://andrelarsen.netlify.com/",
-    twitterUsername: "@hamderandrew"
+    twitterUsername: "@hamderandrew",
+    ogImg: "/src/assets/favicon/favicon.ico"
   },
   plugins: [
     `gatsby-plugin-sass`,
