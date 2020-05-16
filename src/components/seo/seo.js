@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-import favicon from "@favicon/favicon.ico"
+import ogImg from "@favicon/ms-icon-310x310.png"
 
 import androidIcon36x36 from "@favicon/android-icon-36x36.png";
 import androidIcon48x48 from "@favicon/android-icon-48x48.png";
@@ -61,7 +61,7 @@ const SEO = ({ title, description, twitterUser, url }) => {
             <meta property="og:type" content="website" />
             <meta property="og:title" content={seo.title} />
             <meta property="og:description" content={seo.description} />
-            <meta property="og:image" content={favicon} />
+            <meta property="og:image" content={ogImg} />
 
             <link rel="apple-touch-icon" sizes="57x57" href={appleIcon57x57} />
             <link rel="apple-touch-icon" sizes="60x60" href={appleIcon60x60} />
