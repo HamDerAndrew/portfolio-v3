@@ -91,14 +91,30 @@ p {
 .loading {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.loading-dots {
-    padding-bottom: .5rem !important;
+.loading-img-container {
+    width: 100px;
+    height: auto;
 }
 
+.cls-1 {
+    fill:#0d2139;
+
+}
+
+.cls-3 {
+    font-size:335.15px;
+    fill:#8892b0;
+    font-family:Aerospace;
+}
+
+#svg-logo {
+    width: 100%;
+}
 
 /* ==== Home Styling ==== */
 .arrow-container {
