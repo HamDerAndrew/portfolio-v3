@@ -313,7 +313,7 @@ svg:hover, svg:hover .full-fill {
     
     .project-card {
         width: 50%;
-        margin: auto;
+        margin: 0 auto;
         display: block;
     }
   }
