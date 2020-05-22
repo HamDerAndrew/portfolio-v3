@@ -85,7 +85,8 @@ export default class Index extends Component {
             <section id="projects" className="wrapper ptb">
                 <div className="container has-text-centered">
                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have built</h2>
-                    <h3 className="subtitle has-text-weight-bold is-size-4">The projects range from  <br /> websites to native apps.</h3>
+                    <h3 className="subtitle has-text-weight-bold is-size-4">Have a look here or  <br /> 
+                        check my <a href="https://github.com/hamderandrew" className="header-link" target="_blank" rel="noopener noreferrer">Github</a> for more.</h3>
                 </div>
                 {/* Projects Start */}
                 <div className="card-container">
@@ -117,7 +118,8 @@ export default class Index extends Component {
                 </div>
                 <div className="columns about-container">
                     <div className="column">
-                        <p className="is-size-4">Aside from being interested in technology in general, I hold a bachelor degree in Webdevelopment from UCL Odense in Denmark. I have worked with development of websites and native apps for 2 years. I have worked on projects where I was the only developer and also on projects as part of a team.
+                        <p className="is-size-4">I hold a bachelor degree in Webdevelopment and an AP degree in Multimedia Design And Communication, both from UCL Odense in Denmark. 
+                        I have worked with development of websites and native apps for 2 years. I have worked on projects where I was the only developer and also on projects as part of a team.
                         Some of the technologies I have worked with include:
                         </p>
                     </div>

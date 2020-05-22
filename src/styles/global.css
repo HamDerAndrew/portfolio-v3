@@ -123,6 +123,11 @@ p {
 
 
 /* ==== Projects Styling ==== */
+.header-link {
+    text-decoration: underline;
+    color: inherit;
+}
+
 .card-container {
     max-width: 100%;
     display: flex;
