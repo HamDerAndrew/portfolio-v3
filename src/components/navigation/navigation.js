@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import logo from "../../assets/img/A.png";
 import { Spring } from "react-spring/renderprops";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 class Navigation extends Component {
     constructor(props) {
@@ -86,9 +87,9 @@ class Navigation extends Component {
                                     <a href="#contact" className="navbar-item hvr-underline-from-left">
                                         Contact
                                     </a>
-                                    <a href="https://alarsen.one/blog/" className="navbar-item custom-link hvr-underline-from-left" target="_blank" rel="noopener noreferrer">
+                                    <OutboundLink href="https://alarsen.one/blog/" className="navbar-item custom-link hvr-underline-from-left" target="_blank" rel="noopener noreferrer">
                                         Blog
-                                    </a>
+                                    </OutboundLink>
                                 </div>
                             </div>
                         </nav>
