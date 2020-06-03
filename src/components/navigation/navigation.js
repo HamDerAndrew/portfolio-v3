@@ -86,6 +86,9 @@ class Navigation extends Component {
                                     <a href="#contact" className="navbar-item hvr-underline-from-left">
                                         Contact
                                     </a>
+                                    <a href="https://alarsen.one/blog/" className="navbar-item custom-link hvr-underline-from-left" target="_blank" rel="noopener noreferrer">
+                                        Blog
+                                    </a>
                                 </div>
                             </div>
                         </nav>

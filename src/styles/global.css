@@ -86,6 +86,16 @@ p {
     align-items: center !important;
 }
 
+.custom-link {
+    border: 1px solid #8892b0;;
+    color: #e3e3e3 !important;
+    border-radius: 3px;
+}
+
+.custom-link:focus {
+    border: 1px solid;
+}
+
 
 /* ==== Loading ==== */
 .loading {
