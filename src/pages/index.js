@@ -169,10 +169,10 @@ export default class Index extends Component {
                     <a className="some-icon" href="https://www.linkedin.com/in/sondergaardandre/">
                         <Linkedin />
                     </a>
-                    <a className="some-icon" href="https://.twitter.com/hamderandrew">
+                    <a className="some-icon" href="https://twitter.com/hamderandrew">
                         <Twitter />
                     </a>
-                    <a className="some-icon" href="https://twitter.com/hamderandrew">
+                    <a className="some-icon" href="https://github.com/hamderandrew">
                         <Github />
                     </a>
                 </div>
