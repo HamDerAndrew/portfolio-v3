@@ -49,7 +49,6 @@ class Loading extends Component {
                         config={config.slow}
                         reset={this.state.isLoaded}>
                             {element => props => <span style={props} className="title has-text-light">{element}</span>}
-                            
                         </Trail>
                     </p>
                 </div>

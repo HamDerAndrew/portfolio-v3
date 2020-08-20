@@ -147,7 +147,7 @@ export default class Index extends Component {
                                 <p className="is-size-4 skill-text">Nodejs</p>
                             </div>
                             <div className="tech-box has-text-centered">
-                                <p className="is-size-4 skill-text">FireBase</p>
+                                <p className="is-size-4 skill-text">MongoDB</p>
                             </div>
                         </div>
                     </div>
