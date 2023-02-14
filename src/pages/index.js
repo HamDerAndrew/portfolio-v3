@@ -69,8 +69,8 @@ export default class Index extends Component {
                             >
                             {props => 
                                 <div style={props}>
-                                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Hi! I'm André. <br /> I code</h2>
-                                    <h3 className="subtitle has-text-weight-bold is-size-4">Webdeveloper out of Denmark. <br /> I build things for <br /> the Web, Android and iOS.</h3>
+                                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Hello there! 👋 </h2>
+                                    <h3 className="subtitle has-text-weight-bold is-size-4">I'm André Larsen. <br/>Webdeveloper out of Denmark building things for the Web, Android and iOS.</h3>
                                 </div>}
                         </Spring>
                         <div className="arrow-container">
@@ -90,18 +90,52 @@ export default class Index extends Component {
                 </div>
                 {/* Projects Start */}
                 <div className="card-container">
+                    <p>
+                        Currently I am spending my time building cool tools in 2nd Level Support @Umbraco HQ + resolving tickets for Umbraco CMS and Umbraco Cloud.
+                    </p>
+                    <p>Feel free to checkout some of the cool sideprojects I've built:</p>
+                    <div class="is-flex is-justify-content-space-between">
                     
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                        <div className="project-card" key={node.id}>
-                            <Project 
+                            
+                        <div class="card m-1" key={node.id}>
+                            <div class="has-background-link p-4">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">{node.frontmatter.title}</p>
+                                        <div className="tags">
+                                            <span className="tag">Nodejs</span>
+                                            <span className="tag">Vanilla js</span>
+                                            <span className="tag">CSS</span>
+                                            <span className="tag">HTML5</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                {node.excerpt}
+                                <ul>
+                                    <li>
+                                        <a href={node.frontmatter.giturl}>GitHub</a> 
+                                    </li>
+                                    <li>
+                                        <a href={node.frontmatter.liveurl}>Live</a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                                                      {/* <Project 
                                 keyId={node.id}
                                 cardTitle={node.frontmatter.title}
                                 description={node.excerpt}
                                 gitUrl={node.frontmatter.giturl}
                                 liveUrl={node.frontmatter.liveurl}
-                            />
+                            /> */}
                         </div>
                         ))}
+                        </div>
 
                 </div>
             </section>
@@ -189,7 +223,7 @@ export default class Index extends Component {
 
 export const query = graphql`
 query {
-    allMarkdownRemark {
+    allMarkdownRemark(limit: 3) {
         edges {
           node {
             excerpt
