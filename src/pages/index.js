@@ -71,6 +71,9 @@ export default class Index extends Component {
                                 <div style={props}>
                                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Hello there! 👋 </h2>
                                     <h3 className="subtitle has-text-weight-bold is-size-4">I'm André Larsen. <br/>Webdeveloper out of Denmark building things for the Web, Android and iOS.</h3>
+                                    <p>
+                        Currently I am spending my time building cool tools in 2nd Level Support @Umbraco HQ + resolving tickets for Umbraco CMS and Umbraco Cloud.
+                    </p>
                                 </div>}
                         </Spring>
                         <div className="arrow-container">
@@ -85,8 +88,6 @@ export default class Index extends Component {
             <section id="projects" className="wrapper ptb">
                 <div className="container has-text-centered">
                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have built</h2>
-                    <h3 className="subtitle has-text-weight-bold is-size-4">Have a look here or  <br /> 
-                        check my <a href="https://github.com/hamderandrew" className="header-link" target="_blank" rel="noopener noreferrer">Github</a> for more.</h3>
                 </div>
                 {/* Projects Start */}
                 <div className="card-container">
@@ -136,7 +137,25 @@ export default class Index extends Component {
                         </div>
                         ))}
                         </div>
-
+                        <div className="container has-text-centered">
+                            <h3 className="subtitle has-text-weight-bold is-size-4">Have a look here or  <br /> 
+                            check my <a href="https://github.com/hamderandrew" className="header-link" target="_blank" rel="noopener noreferrer">Github</a> for more.</h3>
+                        </div>
+                </div>
+                <div class="card custom-card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" />
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4">André Larsen</p>
+                                <p class="subtitle is-6">@HamDerAndrew</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
