@@ -91,7 +91,7 @@ export default class Index extends Component {
                 {/* Projects Start */}
                 <div className="card-container">
                     
-                        {data.allMarkdownRemark.edges.map(({ node }) => (
+                        {/* {data.allMarkdownRemark.edges.map(({ node }) => (
                         <div className="project-card" key={node.id}>
                             <Project 
                                 keyId={node.id}
@@ -101,7 +101,7 @@ export default class Index extends Component {
                                 liveUrl={node.frontmatter.liveurl}
                             />
                         </div>
-                        ))}
+                        ))} */}
 
                 </div>
             </section>
