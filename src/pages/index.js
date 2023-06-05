@@ -70,7 +70,7 @@ export default class Index extends Component {
                             >
                             {props => 
                                 <div style={props}>
-                                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Hello there! 👋 </h2>
+                                    <h2 className="is-uppercase has-text-weight-bold is-size-1">Hello there! <span role="image">👋</span> </h2> 
                                     <h3 className="subtitle has-text-weight-bold is-size-4">I'm André Larsen. Webdeveloper out of Denmark.</h3>
                                     <p>
                         Currently I am spending my time building cool tools in 2nd Level Support @Umbraco HQ + resolving tickets for Umbraco CMS and Umbraco Cloud.
@@ -91,7 +91,7 @@ export default class Index extends Component {
                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have built</h2>
                 </div>
                 {/* Projects Start */}
-                <h2 className="under-construction">Under construction <i class="fa-solid fa-hammer fa-shake"></i></h2>
+                <h2 className="under-construction">Under construction <span role="image">🔨</span> </h2>
                 <div className="card-container under-construction-hider">
                     <p>
                         Currently I am spending my time building cool tools in 2nd Level Support @Umbraco HQ + resolving tickets for Umbraco CMS and Umbraco Cloud.
