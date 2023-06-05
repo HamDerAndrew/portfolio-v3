@@ -57,10 +57,11 @@ export default class Index extends Component {
             />
             <Helmet>
                 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet" />
+                <script src="https://kit.fontawesome.com/83763123a9.js" crossorigin="anonymous"></script>
             </Helmet>
             <Navigation />
             <section id="home" className="hero is-fullheight-with-navbar">
-                <div className="hero-body">
+                <div className="hero-body wrapper">
                     <div className="container has-text-centered	">
                         <Spring
                             from={{ opacity: 0 }}
@@ -70,7 +71,7 @@ export default class Index extends Component {
                             {props => 
                                 <div style={props}>
                                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Hello there! 👋 </h2>
-                                    <h3 className="subtitle has-text-weight-bold is-size-4">I'm André Larsen. <br/>Webdeveloper out of Denmark building things for the Web, Android and iOS.</h3>
+                                    <h3 className="subtitle has-text-weight-bold is-size-4">I'm André Larsen. Webdeveloper out of Denmark.</h3>
                                     <p>
                         Currently I am spending my time building cool tools in 2nd Level Support @Umbraco HQ + resolving tickets for Umbraco CMS and Umbraco Cloud.
                     </p>
@@ -90,12 +91,13 @@ export default class Index extends Component {
                     <h2 className="is-uppercase has-text-weight-bold is-size-1">Check out what<br /> I have built</h2>
                 </div>
                 {/* Projects Start */}
-                <div className="card-container">
+                <h2 className="under-construction">Under construction <i class="fa-solid fa-hammer fa-shake"></i></h2>
+                <div className="card-container under-construction-hider">
                     <p>
                         Currently I am spending my time building cool tools in 2nd Level Support @Umbraco HQ + resolving tickets for Umbraco CMS and Umbraco Cloud.
                     </p>
                     <p>Feel free to checkout some of the cool sideprojects I've built:</p>
-                    <div class="is-flex is-justify-content-space-between">
+                    <div className="is-flex is-justify-content-space-between">
                     
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             
@@ -142,7 +144,7 @@ export default class Index extends Component {
                             check my <a href="https://github.com/hamderandrew" className="header-link" target="_blank" rel="noopener noreferrer">Github</a> for more.</h3>
                         </div>
                 </div>
-                <div class="card custom-card">
+                <div class="card custom-card under-construction-hider">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-left">
@@ -185,16 +187,16 @@ export default class Index extends Component {
                                 <p className="is-size-4 skill-text">JavaScript</p>
                             </div>
                             <div className="tech-box has-text-centered">
-                                <p className="is-size-4 skill-text">Vue</p>
+                                <p className="is-size-4 skill-text">Lit</p>
                             </div>
                             <div className="tech-box has-text-centered">
-                                <p className="is-size-4 skill-text">Gatsby</p>
+                                <p className="is-size-4 skill-text">React</p>
                             </div>
                             <div className="tech-box has-text-centered">
-                                <p className="is-size-4 skill-text">React Native</p>
+                                <p className="is-size-4 skill-text">Umbraco CMS</p>
                             </div>
                             <div className="tech-box has-text-centered">
-                                <p className="is-size-4 skill-text">Swift 5</p>
+                                <p className="is-size-4 skill-text">Azure</p>
                             </div>
                             <div className="tech-box has-text-centered">
                                 <p className="is-size-4 skill-text">Nodejs</p>

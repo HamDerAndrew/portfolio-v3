@@ -133,6 +133,27 @@ p {
 
 
 /* ==== Projects Styling ==== */
+.under-construction {
+    margin-top: 100px;
+    text-align: center;
+    color: #a4b088;
+    font-size: 40px;
+    position: relative;
+    animation: hover 1s infinite alternate;
+}
+@keyframes hover {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+}
+
+.under-construction-hider {
+    opacity: .06;
+}
+
 .header-link {
     text-decoration: underline;
     color: inherit;
@@ -144,8 +165,12 @@ p {
     flex-wrap: wrap;
 }
 
-.card {
+.card-container .card, .custom-card {
     background-color: #0a192f !important;
+}
+
+.card .title {
+    color: #8892b0 !important;
 }
 
 svg:hover, svg:hover .full-fill {
